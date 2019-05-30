@@ -366,7 +366,9 @@ class Connection {
     String responseBuf;
     int responseLen;
 
-    _responseBuffer.addAll(res);
+    if (res.length != 0) {
+      _responseBuffer.addAll(res);
+    }
 
     _responseLength = _responseBuffer.length;
 
